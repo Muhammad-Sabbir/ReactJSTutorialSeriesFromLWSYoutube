@@ -1,0 +1,16 @@
+echo "# ReactJSTutorialSeriesFromLWSYoutube" >> README.md
+git init
+git add README.md
+git commit -m "Lecture 01: What is React and How it works"
+git branch -M main
+git remote add origin https://github.com/Muhammad-Sabbir/ReactJSTutorialSeriesFromLWSYoutube.git
+git push -u origin main
+
+
+
+
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/Muhammad-Sabbir/ReactJSTutorialSeriesFromLWSYoutube.git
+git branch -M main
+git push -u origin main
