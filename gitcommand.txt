@@ -9,5 +9,5 @@ git push -u origin main
 
 
 git add --all
-git commit -m "Lecture 06: React Components and Props Core Concept - React Tutorial Bangla Series"
+git commit -m "Lecture 07: React State & Lifecycle in Class Component - React Tutorial Bangla Series"
 git push -u origin main

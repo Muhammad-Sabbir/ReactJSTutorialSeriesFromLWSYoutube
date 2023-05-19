@@ -1,21 +1,14 @@
 // import logo from './logo.svg';
 import React from 'react';
 import './App.css';
+import Clock from './components/Clock';
 
-function Increment() {
-  const [counter, setCounter] = React.useState(0);
+function App() {
   return (
-    <div className='App'>
-      <div>
-        <h1 id='display'>{counter}</h1>
-        <div>
-          <button id='button' onClick={() => setCounter(counter + 1)}>
-            Increment +
-          </button>
-        </div>
-      </div>
+    <div>
+      <Clock locale='bn-bd' />
     </div>
   );
 }
 
-export default Increment;
+export default App;
