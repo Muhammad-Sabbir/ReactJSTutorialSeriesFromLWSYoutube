@@ -9,5 +9,5 @@ git push -u origin main
 
 
 git add --all
-git commit -m "Lecture 07: React State & Lifecycle in Class Component - React Tutorial Bangla Series"
+git commit -m "Lecture 08: React Event Handling & Control Re Rendering"
 git push -u origin main

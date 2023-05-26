@@ -1,9 +1,9 @@
 import React from 'react';
-
+import Button from './Button';
 class Clock extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { date: new Date() };
+    this.state = { date: new Date(), locale: 'bn-BD' };
   }
 
   componentDidMount() {
@@ -18,12 +18,26 @@ class Clock extends React.Component {
     clearInterval(this.clockTimer);
   }
 
+  handleClick = (locale) => {
+    // e.preventDefault(); // for stopping reload the page.
+    // console.log('The button was clicked');
+    this.setState({
+      locale: locale,
+    });
+  };
+
   render() {
     // here donot chenge any props value , otherwise this will go inside infinite loop
+    const { date, locale } = this.state;
     return (
-      <h1 className='heading'>
-        <span className='text'>{this.state.date.toLocaleTimeString(this.props.locale)}</span>
-      </h1>
+      <div>
+        <h1 className='heading'>
+          <span className='text'>{date.toLocaleTimeString(locale)}</span>
+        </h1>
+        <Button change={this.handleClick} locale='en-US'>
+          Click Here
+        </Button>
+      </div>
     );
   }
 }
