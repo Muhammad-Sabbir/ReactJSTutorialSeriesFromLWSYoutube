@@ -26,17 +26,70 @@ class Clock extends React.Component {
     });
   };
 
+  //   // example 01:
+  //   render() {
+  //     // here donot chenge any props value , otherwise this will go inside infinite loop
+  //     const { date, locale } = this.state;
+  //     let button;
+  //     if (locale === 'bn-BD') {
+  //       button = (
+  //         <Button change={this.handleClick} locale='en-US'>
+  //           Click Here
+  //         </Button>
+  //       );
+  //     } else {
+  //       button = (
+  //         <Button change={this.handleClick} locale='bn-BD'>
+  //           Click Here
+  //         </Button>
+  //       );
+  //     }
+  //     return (
+  //       <div>
+  //         <h1 className='heading'>
+  //           <span className='text'>{date.toLocaleTimeString(locale)}</span>
+  //         </h1>
+  //         {button}
+  //       </div>
+  //     );
+  //   }
+  // }
+
+  //   // example 02:
+  //   render() {
+  //     // here donot chenge any props value , otherwise this will go inside infinite loop
+  //     const { date, locale } = this.state;
+  //     let button;
+  //     return (
+  //       <div>
+  //         <h1 className='heading'>
+  //           <span className='text'>{date.toLocaleTimeString(locale)}</span>
+  //         </h1>
+  //         {locale === 'bn-BD' ? (
+  //           <Button change={this.handleClick} locale='en-US' show={false} />
+  //         ) : (
+  //           <Button change={this.handleClick} locale='bn-BD' show />
+  //         )}
+  //       </div>
+  //     );
+  //   }
+  // }
+
+  // example 03:
   render() {
     // here donot chenge any props value , otherwise this will go inside infinite loop
     const { date, locale } = this.state;
+    let button;
     return (
       <div>
         <h1 className='heading'>
           <span className='text'>{date.toLocaleTimeString(locale)}</span>
         </h1>
-        <Button change={this.handleClick} locale='en-US'>
-          Click Here
-        </Button>
+        {locale === 'bn-BD' ? (
+          <Button change={this.handleClick} locale='en-US' show={false} enable={false} />
+        ) : (
+          <Button change={this.handleClick} locale='bn-BD' show />
+        )}
       </div>
     );
   }
